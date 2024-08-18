@@ -20,6 +20,7 @@ public class BusController {
 
     @PostMapping("/addBus")
     public ResponseEntity<String> addBus(@RequestBody BusDto busDto){
+        System.out.println("Testing build for jenkins.");
         Bus bus = busService.addBus(busDto);
         if(bus != null)
             return new ResponseEntity<>("Bus detail added.", HttpStatus.CREATED);
